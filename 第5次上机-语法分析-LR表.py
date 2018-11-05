@@ -51,6 +51,7 @@ while 1:
         stack.append(cur)
         stack.append(int(test[1:]))
         cur=next(text)
+        print("移进",stack[-1])
     elif test[0]=='r':
         rul=int(test[1:])#具体的对应哪个规约
         #stack先弹出来对应规则右边的那么多个长度
@@ -62,6 +63,8 @@ while 1:
         stack.append(int(data.loc[stack[-2],stack[-1]]))
         print(stack)
         result.append(rules[rul])
+        print("规约")
+        print(rules[rul])
     elif test[0]=='a':
         break
     else:
